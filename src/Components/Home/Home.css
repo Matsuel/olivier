@@ -40,4 +40,5 @@
     color: #fff;
     text-align: center;
     text-align: justify;
+    white-space: pre-line;
 }

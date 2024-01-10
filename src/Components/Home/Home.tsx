@@ -8,13 +8,16 @@ const Home = () => {
     return (
         <section id='#home' className='home-wrapper'>
             <div className="home-speech">
+                <h1 className='speech-title'>
+                    &nbsp;
                 <TypeAnimation 
                     className='speech-title'
                     cursor={false}
-                    sequence={['Hi everyone.', 1000, 'I am Hito,', 1000]}
-                    wrapper="h1"
+                    sequence={['Hi everyone. ', 1000, 'I am Hito, ', 1000]}
+                    wrapper="span"
                     repeat={Infinity}
                 />
+                </h1>
                 <p className='speech-text'> 
                     A former R&D engineer during about 20 years. I have worked in different industries and been involved in a few major international projects. Despite my interest in this position, I fell the need to integrate an artistic side to my work.<br/>
                     So I started a retraining in 2021 in order to become a game designer. Both technical and artistic aspects mixed in one role, the best position i could imagine ever.<br/>
