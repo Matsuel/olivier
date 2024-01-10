@@ -1,0 +1,38 @@
+.navbar-wrapper {
+    /* background-color: #000; */
+    background-color: transparent;
+    height: 7%;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pseudo-wrap{
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+}
+
+.pseudo{
+    font-size: 1.5vw;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10%;
+    padding-right: 10%;
+}
+
+.link{
+    font-size: 1vw;
+    color: #fff;
+    text-decoration: none;
+}
