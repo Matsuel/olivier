@@ -11,7 +11,8 @@ const Navbar = () => {
             <div className="nav-links">
                 <a className='link' href="#about">About</a>
                 <a className='link' href="#projects">Projects</a>
-                <a className='link' target='_blank' href="https://itch.io/profile/h1to">Itch</a>
+                <button onClick={() => window.open('https://itch.io/profile/h1to', '_blank')} className='link-button'>Itch</button>
+                {/* <a className='link' target='_blank' href="https://itch.io/profile/h1to">Itch</a> */}
             </div>
         </div>
     )
