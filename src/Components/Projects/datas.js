@@ -1,4 +1,4 @@
-export const datas = [
+export default [
     {
         'title':'Game demo update: Agoge',
         'description':'',
