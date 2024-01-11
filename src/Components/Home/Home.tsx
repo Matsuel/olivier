@@ -6,7 +6,7 @@ import { TypeAnimation } from 'react-type-animation'
 
 const Home = () => {
     return (
-        <section id='#home' className='home-wrapper'>
+        <section id='about' className='home-wrapper'>
             <div className="home-speech">
                 <h1 className='speech-title'>
                     &nbsp;

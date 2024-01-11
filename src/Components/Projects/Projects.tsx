@@ -4,14 +4,14 @@ import ProjectsProvider from './ProjectsProvider'
 
 const Projects = () => {
     return (
-        <div className='projects-wrapper'>
+        <section id='projects' className='projects-wrapper'>
             <h1 className="projects-title">
                 Projects
             </h1>
             <div className="projects-container">
                 <ProjectsProvider />
             </div>
-        </div>
+        </section>
     )
 }
 
