@@ -48,10 +48,20 @@
     align-items: center;
     flex-direction: column;
     padding-left: 10%;
-    background-image: url("../../assets/circleCloud.svg");
+    /* background-image: url("../../assets/circleCloud.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-position: center;
+    background-position: center; */
+}
+
+.circle-cloud{
+    height: 80%;
+    width: 80%;
+    margin-top: 5%;
+    position: absolute;
+    z-index: -1;
+    opacity: 1;
+    scale: 1;
 }
 
 .speech-title{
