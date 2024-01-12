@@ -1,6 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 import Olivier from '../../assets/olivier.png'
+import Visit from '../../assets/visit.svg'
 
 const Navbar = () => {
     const [active, setActive] = React.useState(-1);
@@ -35,7 +36,9 @@ const Navbar = () => {
                 <a className={`link ${active===1 ? "link-active":""}`} onClick={()=>handleActive(1)} href="#projects">Projects</a>
             </div>
             <div className="icth-link">
-                <button onClick={() => window.open('https://itch.io/profile/h1to', '_blank')} className='link-button'>Itch</button>
+                <button onClick={() => window.open('https://itch.io/profile/h1to', '_blank')} className='link-button'>
+                    <img src={Visit} alt="Visit" className='visit-logo' />
+                    Itch</button>
             </div>
         </div>
     )

@@ -54,7 +54,11 @@
 
 .icth-link{
     width: 10%;
+    height: 100%;
     margin-right: 5%;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
 }
 
 .link-button{
@@ -63,9 +67,16 @@
     font-size: 1vw;
     color: #000;
     text-decoration: none;
-    width: 100%;
+    width: 70%;
+    height: 50%;
     text-align: center;
-    padding: 0.5vw;
+    padding: 0.2vw;
     border-radius: 25px;
     background-color: #00DD00;
+}
+
+.visit-logo{
+    width: 15px;
+    height: 15px;
+    place-self: center;
 }
