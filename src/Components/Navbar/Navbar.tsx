@@ -13,7 +13,7 @@ const Navbar = () => {
             navbarRef.current.style.top = "-100px";
         } else if (e.deltaY < 0) {
             // @ts-ignore
-            navbarRef.current.style.top = "0";
+            navbarRef.current.style.top = "30px";
         }
     }
 

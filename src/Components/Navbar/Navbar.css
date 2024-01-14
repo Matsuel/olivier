@@ -2,12 +2,13 @@
     background-color: #000;
     height: 7%;
     position: fixed;
-    width: 100vw;
+    width: 70vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #18181b;
-    top: 0;
+    border: 1px solid #18181b;
+    top: 30px;
+    border-radius: 35px;
     transition: top 0.3s ease-in-out;
     z-index: 1000;
 }
