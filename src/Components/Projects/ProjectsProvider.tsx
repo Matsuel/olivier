@@ -13,24 +13,6 @@ interface Project {
 }
 
 const ProjectsProvider = () => {
-    // axios.get(proxyurl + targetUrl)
-    //     .then(res => {
-    //         console.log(res.data);
-    //     })
-    //     .catch(err => {
-    //         console.log(err);
-    //     })
-
-    useEffect(() => {
-        axios.get('/.netlify/functions/myfunction')
-            .then(res => {
-                console.log(res.data);
-            })
-            .catch(err => {
-                console.log(err);
-            })
-    }, [])
-
     return (
         <div>
             {datas.map((data, index) => {
