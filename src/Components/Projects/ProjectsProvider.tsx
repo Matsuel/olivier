@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Projects.css'
 import datas from './datas'
 // @ts-ignore
 import Climb from '../../assets/ProjectsImages/Am8U3b.png'
+import axios from 'axios'
 
 interface Project {
     title: string,
@@ -12,6 +13,24 @@ interface Project {
 }
 
 const ProjectsProvider = () => {
+    // axios.get(proxyurl + targetUrl)
+    //     .then(res => {
+    //         console.log(res.data);
+    //     })
+    //     .catch(err => {
+    //         console.log(err);
+    //     })
+
+    useEffect(() => {
+        axios.get('/.netlify/functions/myfunction')
+            .then(res => {
+                console.log(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }, [])
+
     return (
         <div>
             {datas.map((data, index) => {
