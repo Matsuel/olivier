@@ -1,5 +1,5 @@
 .navbar-wrapper {
-    background-color: #000;
+    background-color: transparent;
     height: 7%;
     position: fixed;
     width: 70vw;
@@ -11,6 +11,7 @@
     border-radius: 35px;
     transition: top 0.3s ease-in-out;
     z-index: 1000;
+    backdrop-filter: blur(15px);
 }
 
 .pseudo-wrap{
