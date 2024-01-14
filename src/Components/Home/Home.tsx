@@ -5,22 +5,22 @@ import Olivier from '../../assets/olivier.png'
 import CircleCloud from '../../assets/circleCloud.svg'
 
 const Home = () => {
-    const opacity: {[key:number]:number} = {1:0.9,2:0.8,3:0.7,4:0.6,5:0.5,6:0.4,7:0.3,8:0.2,9:0.1,10:0.0};
+    // const opacity: {[key:number]:number} = {1:0.9,2:0.8,3:0.7,4:0.6,5:0.5,6:0.4,7:0.3,8:0.2,9:0.1,10:0.0};
 
-    const handleScrollY = () => {
-        const scrollY = window.scrollY;
-        if (scrollY<500) {
-            const moduloOp:number = Math.floor(scrollY/50);
-            document.getElementsByClassName('circle-cloud')[0].setAttribute('style', `opacity: ${opacity[moduloOp]}`);
-        }
-    }   
+    // const handleScrollY = () => {
+    //     const scrollY = window.scrollY;
+    //     if (scrollY<500) {
+    //         const moduloOp:number = Math.floor(scrollY/50);
+    //         document.getElementsByClassName('circle-cloud')[0].setAttribute('style', `opacity: ${opacity[moduloOp]}`);
+    //     }
+    // }   
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScrollY);
-        return () => {
-            window.removeEventListener('scroll', handleScrollY);
-        }
-    }, []);
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScrollY);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScrollY);
+    //     }
+    // }, []);
         
         
 
@@ -29,7 +29,7 @@ const Home = () => {
     return (
         <section id='about' className='home-wrapper'>
             <div className="home-speech">
-                <img id='circleCloud' className='circle-cloud' src={CircleCloud} alt="CircleCloud" />
+                {/* <img id='circleCloud' className='circle-cloud' src={CircleCloud} alt="CircleCloud" /> */}
                 <h1 className='speech-title'>
                 Hi everyone. I am <span className='hito'>Hito</span>,
                 </h1>
