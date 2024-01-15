@@ -1,6 +1,8 @@
 import React, { ChangeEvent, useState } from "react"
 import { useTranslation } from 'react-i18next';
 import { Language } from "../Languages";
+import ReactSwitch from "react-switch";
+import './Lang.css';
 
 const Lang = () => {
     const { i18n } = useTranslation();
@@ -23,13 +25,22 @@ const Lang = () => {
     }
 
     return (
-        <div>
-            <div>
-                <select value={lang} name="language" onChange={changeLanguage}>
-                    <option value={Language.FR}>FR</option>
-                    <option value={Language.EN}>EN</option>
-                </select>
-            </div>
+        <div className="lang-switcher">
+            <label className="lang-label" htmlFor="lang">{lang === Language.EN ? 'EN' : 'FR'}</label>
+            <ReactSwitch
+                checked={lang === Language.EN}
+                onChange={() => changeLanguage({ target: { value: lang === Language.EN ? Language.FR : Language.EN } } as ChangeEvent<HTMLSelectElement>)}
+                checkedIcon={false}
+                uncheckedIcon={false}
+                onColor="#00DD00"
+                offColor="#fff"
+                onHandleColor="#00DD00"
+                offHandleColor="#fff"
+                borderRadius={10}
+                height={10}
+                width={30}
+                handleDiameter={20}
+            />
         </div>
     )
 }

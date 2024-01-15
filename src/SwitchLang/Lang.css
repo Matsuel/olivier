@@ -1,0 +1,18 @@
+.lang-switcher{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    /* margin-right: 30%; */
+    gap: 1vw;
+}
+
+.lang-label{
+    font-size: 1vw;
+    color: #fff;
+    text-decoration: none;
+}

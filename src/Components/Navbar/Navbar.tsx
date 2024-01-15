@@ -37,8 +37,8 @@ const Navbar = () => {
             <div className="nav-links">
                 <a className={`link ${active===0 ? "link-active":""}`} onClick={()=>handleActive(0)} href="#about">{t('navbar.about')}</a>
                 <a className={`link ${active===1 ? "link-active":""}`} onClick={()=>handleActive(1)} href="#projects">{t('navbar.projects')}</a>
-                <Lang />
             </div>
+            <Lang />
             <div className="icth-link">
                 <button onClick={() => window.open('https://itch.io/profile/h1to', '_blank')} className='link-button'>
                     <img src={Visit} alt="Visit" className='visit-logo' />
