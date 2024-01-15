@@ -18,6 +18,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: 0;
     width: 15%;
 }
 
@@ -57,10 +59,11 @@
 .icth-link{
     width: 10%;
     height: 100%;
-    margin-right: 5%;
     display: flex;  
     justify-content: center;
     align-items: center;
+    position: relative;
+    right: -10%;
 }
 
 .link-button{
