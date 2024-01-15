@@ -5,14 +5,23 @@ import Navbar from './Components/Navbar/Navbar';
 import Home from './Components/Home/Home';
 import Projects from './Components/Projects/Projects';
 import "./i18n"
+import { DarkModeContext } from './DarkModeContext';
 
 function App() {
+  const [darkMode, setDarkMode] = React.useState<boolean>(false); //true = dark, false = light
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  }
+
   return (
-    <div className="App">
-      <Navbar />
-      <Home />
-      <Projects />
-    </div>
+    <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
+      <div className={`App ${darkMode ? "dark" : ""}`}>
+        <Navbar />
+        <Home />
+        <Projects />
+      </div>
+    </DarkModeContext.Provider>
   );
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import './Navbar.css'
 import Olivier from '../../assets/olivier.png'
 import Visit from '../../assets/visit.svg'
@@ -6,11 +6,12 @@ import { useTranslation } from 'react-i18next';
 import Lang from '../../SwitchLang/Lang';
 import Moon from '../../assets/moon.svg'
 import Sun from '../../assets/sun.svg'
+import { DarkModeContext } from '../../DarkModeContext';
 
 const Navbar = () => {
     const [active, setActive] = React.useState(-1);
     const navbarRef = React.useRef<HTMLDivElement>(null);
-    const [darkMode, setDarkMode] = React.useState<boolean>(false); //true = dark, false = light
+    const {darkMode, toggleDarkMode} = useContext(DarkModeContext);
     const { t } = useTranslation();
 
     window.onwheel = e => {
@@ -23,13 +24,9 @@ const Navbar = () => {
         }
     }
 
-    const handleDarkMode = () => {
-        if (darkMode) {
-            setDarkMode(false);
-        } else {
-            setDarkMode(true);
-        }
-    }
+    // const handleDarkMode = () => {
+    //     setDarkMode(!darkMode);
+    // }
 
     const handleActive = (index: number) => {
         if (index === active) {
@@ -54,7 +51,7 @@ const Navbar = () => {
                 <button onClick={() => window.open('https://itch.io/profile/h1to', '_blank')} className='link-button'>
                     <img src={Visit} alt="Visit" className='visit-logo' />
                     Itch</button>
-                <button className='mode-button' onClick={() => handleDarkMode()}>
+                <button className='mode-button' onClick={() => toggleDarkMode()}>
                     {/* <img src={Mode} alt="Mode" className='mode-logo' /> */}
                     {darkMode ? <img src={Moon} alt="Moon" className='mode-logo' /> : <img src={Sun} alt="Sun" className='mode-logo' />}
                 </button>
