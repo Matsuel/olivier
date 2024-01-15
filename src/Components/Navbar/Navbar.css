@@ -60,10 +60,25 @@
     width: 10%;
     height: 100%;
     display: flex;  
+    flex-direction: row;
+    gap: 1.2vw;
     justify-content: center;
     align-items: center;
     position: relative;
-    right: -10%;
+    right: -9%;
+}
+
+.mode-button{
+    all: unset;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mode-button:hover{
+    cursor: pointer;
 }
 
 .link-button{
