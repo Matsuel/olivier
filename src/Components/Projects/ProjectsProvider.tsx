@@ -3,7 +3,6 @@ import './Projects.css'
 import datas from './datas'
 // @ts-ignore
 import Climb from '../../assets/ProjectsImages/Am8U3b.png'
-import axios from 'axios'
 
 interface Project {
     title: string,

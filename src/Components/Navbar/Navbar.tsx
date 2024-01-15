@@ -2,10 +2,13 @@ import React from 'react'
 import './Navbar.css'
 import Olivier from '../../assets/olivier.png'
 import Visit from '../../assets/visit.svg'
+import { useTranslation } from 'react-i18next';
+import Lang from '../../SwitchLang/Lang';
 
 const Navbar = () => {
     const [active, setActive] = React.useState(-1);
     const navbarRef = React.useRef<HTMLDivElement>(null);
+    const { t } = useTranslation();
 
     window.onwheel = e => {
         if (e.deltaY > 0) {
@@ -32,8 +35,9 @@ const Navbar = () => {
                 <a href='/' className='pseudo'>H1to</a>
             </div>
             <div className="nav-links">
-                <a className={`link ${active===0 ? "link-active":""}`} onClick={()=>handleActive(0)} href="#about">About</a>
-                <a className={`link ${active===1 ? "link-active":""}`} onClick={()=>handleActive(1)} href="#projects">Projects</a>
+                <a className={`link ${active===0 ? "link-active":""}`} onClick={()=>handleActive(0)} href="#about">{t('navbar.about')}</a>
+                <a className={`link ${active===1 ? "link-active":""}`} onClick={()=>handleActive(1)} href="#projects">{t('navbar.projects')}</a>
+                <Lang />
             </div>
             <div className="icth-link">
                 <button onClick={() => window.open('https://itch.io/profile/h1to', '_blank')} className='link-button'>
