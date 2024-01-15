@@ -29,7 +29,6 @@ const Navbar = () => {
         } else {
             setDarkMode(true);
         }
-        console.log(darkMode);
     }
 
     const handleActive = (index: number) => {
