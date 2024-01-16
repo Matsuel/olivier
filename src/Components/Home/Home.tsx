@@ -21,7 +21,7 @@ const Home = () => {
                     </p>
             </div>
             <div className="logo-home">
-                <img src={Olivier} alt="oliv" className='oliv' />
+                <img src={Olivier} alt="oliv" className={`oliv ${darkMode ? "oliv-dark" : "oliv-light"}`} />
             </div>
         </section>
     )
