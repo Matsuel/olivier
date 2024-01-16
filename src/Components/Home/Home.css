@@ -18,7 +18,7 @@
 
 .oliv{
     /* box-shadow: inset 0 0 0 9px rgba(255,255,255,0.5); */
-    animation: profile-animation 8s ease-in-out infinite 1s;
+    animation: profile-animation 8s ease-in-out infinite;
 }
 
 .oliv-dark{
