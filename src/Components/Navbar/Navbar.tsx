@@ -52,7 +52,6 @@ const Navbar = () => {
                     <img src={Visit} alt="Visit" className='visit-logo' />
                     Itch</button>
                 <button className='mode-button' onClick={() => toggleDarkMode()}>
-                    {/* <img src={Mode} alt="Mode" className='mode-logo' /> */}
                     {darkMode ? <img src={Moon} alt="Moon" className='mode-logo' /> : <img src={Sun} alt="Sun" className='mode-logo' />}
                 </button>
             </div>

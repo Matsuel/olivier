@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
@@ -8,10 +8,15 @@ import "./i18n"
 import { DarkModeContext } from './DarkModeContext';
 
 function App() {
-  const [darkMode, setDarkMode] = React.useState<boolean>(false); //true = dark, false = light
+  const [darkMode, setDarkMode] = useState<boolean>(true); //true = dark, false = light
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+    if (darkMode) {
+      document.body.style.backgroundColor = "#fff";
+    } else {
+      document.body.style.backgroundColor = "#000";
+    }
   }
 
   return (
