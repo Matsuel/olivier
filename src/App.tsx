@@ -10,6 +10,8 @@ import { DarkModeContext } from './DarkModeContext';
 function App() {
   const [darkMode, setDarkMode] = useState<boolean>(true); //true = dark, false = light
 
+  darkMode ? document.body.style.backgroundColor = "#000" : document.body.style.backgroundColor = "#fff";
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     if (darkMode) {

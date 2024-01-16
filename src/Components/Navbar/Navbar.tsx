@@ -12,6 +12,7 @@ const Navbar = () => {
     const [active, setActive] = React.useState(-1);
     const navbarRef = React.useRef<HTMLDivElement>(null);
     const {darkMode, toggleDarkMode} = useContext(DarkModeContext);
+    console.log(darkMode);
     const { t } = useTranslation();
 
     window.onwheel = e => {
