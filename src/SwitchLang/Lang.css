@@ -12,6 +12,14 @@
 
 .lang-label{
     font-size: 1vw;
-    color: #fff;
+    /* color: #fff; */
     text-decoration: none;
+}
+
+.lang-light{
+    color: #fff;
+}
+
+.lang-dark{
+    color: #000;
 }

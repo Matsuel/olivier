@@ -41,16 +41,16 @@ const Navbar = () => {
         <div className='navbar-wrapper' ref={navbarRef}>
             <div className="pseudo-wrap">
                 <img className='home-logo' src={Olivier} alt="Olivier" onClick={() => window.location.href = "/"} />
-                <a href='/' className='pseudo'>H1to</a>
+                <a href='/' className={`pseudo ${darkMode ? "navbar-text-light" : "navbar-text-dark"}`}>H1to</a>
             </div>
             <div className="nav-links">
-                <a className={`link ${active === 0 ? "link-active" : ""}`} onClick={() => handleActive(0)} href="#about">{t('navbar.about')}</a>
-                <a className={`link ${active === 1 ? "link-active" : ""}`} onClick={() => handleActive(1)} href="#projects">{t('navbar.projects')}</a>
+                <a className={`link ${darkMode ? "navbar-text-light" : "navbar-text-dark"} ${active === 0 ? "link-active" : ""}`} onClick={() => handleActive(0)} href="#about">{t('navbar.about')}</a>
+                <a className={`link ${darkMode ? "navbar-text-light" : "navbar-text-dark"} ${active === 1 ? "link-active" : ""}`} onClick={() => handleActive(1)} href="#projects">{t('navbar.projects')}</a>
             </div>
             <Lang />
             <div className="icth-link">
-                <button onClick={() => window.open('https://itch.io/profile/h1to', '_blank')} className='link-button'>
-                    <img src={Visit} alt="Visit" className='visit-logo' />
+                <button onClick={() => window.open('https://itch.io/profile/h1to', '_blank')} className={`link-button ${darkMode ? "navbar-text-light" : "navbar-text-dark"}`}>
+                    <img src={Visit} alt="Visit" className={`visit-logo ${darkMode ? "fill-light" : "fill-dark"}`} />   
                     Itch</button>
                 <button className='mode-button' onClick={() => toggleDarkMode()}>
                     {darkMode ? <img src={Moon} alt="Moon" className='mode-logo' /> : <img src={Sun} alt="Sun" className='mode-logo' />}

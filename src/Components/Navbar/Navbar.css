@@ -35,7 +35,6 @@
 
 .pseudo{
     font-size: 1.5vw;
-    color: #fff;
     text-decoration: none;
 }
 
@@ -48,7 +47,6 @@
 
 .link{
     font-size: 1vw;
-    color: #fff;
     text-decoration: none;
 }
 
@@ -85,7 +83,6 @@
     all: unset;
     cursor: pointer;
     font-size: 1vw;
-    color: #000;
     text-decoration: none;
     width: 70%;
     height: 50%;
@@ -99,4 +96,20 @@
     width: 15px;
     height: 15px;
     place-self: center;
+}
+
+.navbar-text-light{
+    color: #fff;
+}
+
+.navbar-text-dark{
+    color: #000;
+}
+
+.fill-light{
+    stroke: white;
+}
+
+.fill-dark{
+    stroke: black;
 }

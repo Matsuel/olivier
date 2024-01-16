@@ -1,10 +1,12 @@
-import React, { ChangeEvent, useState } from "react"
+import React, { ChangeEvent, useContext, useState } from "react"
 import { useTranslation } from 'react-i18next';
 import { Language } from "../Languages";
 import ReactSwitch from "react-switch";
 import './Lang.css';
+import { DarkModeContext } from "../DarkModeContext";
 
 const Lang = () => {
+    const { darkMode } = useContext(DarkModeContext);
     const { i18n } = useTranslation();
     const [lang, setLang] = useState<Language>(i18n.language as Language);
 
@@ -26,7 +28,7 @@ const Lang = () => {
 
     return (
         <div className="lang-switcher">
-            <label className="lang-label" htmlFor="lang">{lang === Language.EN ? 'EN' : 'FR'}</label>
+            <label className={`lang-label ${darkMode ? "lang-light" : "lang-dark"}`} htmlFor="lang">{lang === Language.EN ? 'EN' : 'FR'}</label>
             <ReactSwitch
                 checked={lang === Language.EN}
                 onChange={() => changeLanguage({ target: { value: lang === Language.EN ? Language.FR : Language.EN } } as ChangeEvent<HTMLSelectElement>)}
