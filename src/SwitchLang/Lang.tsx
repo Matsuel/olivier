@@ -35,9 +35,9 @@ const Lang = () => {
                 checkedIcon={false}
                 uncheckedIcon={false}
                 onColor="#00DD00"
-                offColor="#fff"
+                offColor={darkMode ? "#fff" : "#000"}
                 onHandleColor="#00DD00"
-                offHandleColor="#fff"
+                offHandleColor={darkMode ? "#fff" : "#000"}
                 borderRadius={10}
                 height={10}
                 width={30}
