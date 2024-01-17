@@ -8,7 +8,7 @@ import "./i18n"
 import { DarkModeContext } from './DarkModeContext';
 
 function App() {
-  const [darkMode, setDarkMode] = useState<boolean>(true); //true = dark, false = light
+  const [darkMode, setDarkMode] = useState<boolean>(false); //true = dark, false = light
 
   darkMode ? document.body.style.backgroundColor = "#000" : document.body.style.backgroundColor = "#fff";
 

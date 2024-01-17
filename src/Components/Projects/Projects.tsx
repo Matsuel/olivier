@@ -8,9 +8,7 @@ const Projects = () => {
             <h1 className="projects-title">
                 Projects
             </h1>
-            <div className="projects-container">
                 <ProjectsProvider />
-            </div>
         </section>
     )
 }
