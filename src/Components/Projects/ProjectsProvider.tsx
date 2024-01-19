@@ -23,31 +23,40 @@ const ProjectsProvider = () => {
         <div className="projects-container">
             {datas.map((project, index) => {
                 return (
-                    <div key={index} className='project-card'>
-                        <div className="project-infos">
-                            <h1 className="project-card-title">{project.title}</h1>
-                            <p className="project-card-description">{project.description}</p>
-                            <button className="project-card-button">
-                                <img className="project-card-arrow" src={Arrow} alt="Arrow" />
-                            </button>
-                        </div>
-                        <div className="project-plateforms-image">
-                            <img className="project-card-image" src={Climb} alt="Climb" />
-                            {project.platform.length > 0?(
-                            <div className="projects-plateforms">
-                                {project.platform.map((p: string, index: number) => {
-                                    console.log(p)
+                    <>
+                        <div className="project">
+                            <div key={index} className='project-card'>
+                                <div className="card-image">
+                                    <img src={Climb} alt="project" className='project-image' />
+                                </div>
+                                <div className="card-infos">
+                                    <h2 className="card-title">
+                                        {project.title}
+                                    </h2>
+                                    {
+                                        project.category ? (
+                                            <h3 className="card-category">
+                                                {project.category}
+                                            </h3>
+                                        ) : (
+                                            <></>
+                                        )
+                                    }
+                                    <p className="card-description">
+                                        {project.description}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="plateforms">
+                                {project.platform.map((plateform, index) => {
                                     return (
-                                        <img key={index} className="project-card-plateform" src={IconsManager[p]} alt={p} />
+                                        <img key={index} src={IconsManager[plateform]} alt="plateform" className="plateform-icon" />
                                     )
                                 })}
-
                             </div>
-
-                            ):("")}
-
                         </div>
-                    </div>
+                        <div className="divider"></div>
+                    </>
                 )
             })}
         </div>
