@@ -42,9 +42,15 @@ const ProjectsProvider = () => {
                                             <></>
                                         )
                                     }
-                                    <p className="card-description">
-                                        {project.description}
-                                    </p>
+                                    {
+                                        project.description ? (
+                                            <p className="card-description">
+                                                {project.description}
+                                            </p>
+                                        ) : (
+                                            <></>
+                                        )
+                                    }
                                 </div>
                             </div>
                             <div className="plateforms">
