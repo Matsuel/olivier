@@ -1,10 +1,9 @@
 import React,{useEffect} from 'react'
 import './Home.css'
-// @ts-ignore
-import Olivier from '../../assets/olivier.png'
-import CircleCloud from '../../assets/circleCloud.svg'
 import { useTranslation } from 'react-i18next';
 import { DarkModeContext } from '../../DarkModeContext';
+import Olivier from '../../assets/olivier.png'
+import { TypeAnimation } from 'react-type-animation';
 
 const Home = () => {
     const {darkMode} = React.useContext(DarkModeContext);
@@ -12,17 +11,22 @@ const Home = () => {
 
     return (
         <section id='about' className='home-wrapper'>
-            <div className="home-speech">
-                <h1 className={`speech-title ${darkMode ? "text-light" : "text-dark"}`}>
-                {t('home.title')} <span className='hito'>Hito</span>,
-                </h1>
-                <p className={`speech-text ${darkMode ? "text-light" : "text-dark"}`}>
-                {t('home.speech')}
-                    </p>
-            </div>
-            <div className="logo-home">
-                <img src={Olivier} alt="oliv" className={`oliv ${darkMode ? "oliv-dark" : "oliv-light"}`} />
-            </div>
+            <img src={Olivier} alt="Olivier" className='home-logo-img'/>
+            <h1 className={`home-title ${darkMode ? "home-title-light" : "home-title-dark"}`}>
+                <TypeAnimation
+                    cursor={true}
+                    sequence={[
+                        'Hi everyone,',
+                        1000,
+                        'I\'m H1to',
+                        1000,
+                        "I'm a game designer",
+                        1000
+                    ]}
+                    wrapper="span"
+                    repeat={Infinity}
+                />
+            </h1>
         </section>
     )
 }
