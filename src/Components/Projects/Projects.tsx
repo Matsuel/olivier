@@ -3,6 +3,9 @@ import './Projects.css'
 import { DarkModeContext } from '../../DarkModeContext'
 import datas from './datas'
 import ImageTest from '../../assets/ProjectsImages/Am8U3b.png'
+import Apple from '../../assets/apple.svg'
+import Linux from '../../assets/linux.svg'
+import Windows from '../../assets/windows.svg'
 
 interface Project {
     title : string,
@@ -13,6 +16,11 @@ interface Project {
 
 const Projects = () => {
     const { darkMode } = React.useContext(DarkModeContext);
+    const Plteforms : Record<string, any> = {
+        "W": Windows,
+        "L": Linux,
+        "Apple": Apple,
+    }
     return (
         <section className="projects" id="projects">
             <h1 className={`projects-title ${darkMode ? "home-title-light" : "home-title-dark"}`}>Projects</h1>
@@ -27,11 +35,15 @@ const Projects = () => {
                             <p className={`project-description ${darkMode ? "home-title-light" : "home-title-dark"}`}>
                                 {project.description}
                             </p>
-                            <p className="project-category">
-                                {project.category}
+                            <p className={`project-category ${darkMode ? "home-title-light" : "home-title-dark"}`}>
+                                Category: {project.category ? project.category : "No category"}
                             </p>
                             <div className="project-footer">
-                                
+                                {project.platform.map((platform: string, index: number) => {
+                                    return (
+                                        <img src={Plteforms[platform]} alt="platform" className="project-platform" key={index} />
+                                    )
+                                })}
                             </div>
                         </div>
                     )
