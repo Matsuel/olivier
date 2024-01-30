@@ -1,5 +1,5 @@
 .home-wrapper{
-    margin-top: -50px;
+    margin-top: 0px;
     height:auto;
     width: 100%;
     display: flex;
@@ -26,4 +26,11 @@
 
 .home-title-dark{
     color: #000;
+}
+
+.home-text {
+    width: 32%;
+    white-space: pre-wrap;
+    font-size: 18px;
+    text-align: start;
 }
