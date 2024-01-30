@@ -38,8 +38,8 @@ const Home = () => {
                 Any advice is really welcome.
                 
             </div>
-            <div className={`home-text ${darkMode ? "home-title-light" : "home-title-dark"}`}>
-            Hito
+            <div className={`home-text-name ${darkMode ? "home-title-light" : "home-title-dark"}`}>
+                Hito
             </div>
         </section>
     )

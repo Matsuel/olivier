@@ -45,5 +45,6 @@
     width: 32%;
     white-space: pre-wrap;
     font-size: 18px;
-    text-align: start;
+    text-align: center;
+    font-weight: lighter;
 }
