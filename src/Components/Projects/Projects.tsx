@@ -38,7 +38,7 @@ const Projects = () => {
                             <p className={`project-category ${darkMode ? "home-title-light" : "home-title-dark"}`}>
                                 Category: {project.category ? project.category : "No category"}
                             </p>
-                            <div className="project-footer">
+                            <div className={`project-footer`}>
                                 {project.platform.map((platform: string, index: number) => {
                                     return (
                                         <img src={Plteforms[platform]} alt="platform" className="project-platform" key={index} />
