@@ -27,12 +27,16 @@ const Projects = () => {
                             <p className={`project-description ${darkMode ? "home-title-light" : "home-title-dark"}`}>
                                 {project.description}
                             </p>
+                            <p className="project-category">
+                                {project.category}
+                            </p>
+                            <div className="project-footer">
+                                
+                            </div>
                         </div>
                     )
                 })}
-
             </div>
-
         </section>
     )
 }
