@@ -1,14 +1,14 @@
 import React from 'react'
 import './Projects.css'
-import ProjectsProvider from './ProjectsProvider'
+import { DarkModeContext } from '../../DarkModeContext'
 
 const Projects = () => {
+    const { darkMode } = React.useContext(DarkModeContext);
     return (
-        <section id='projects' className='projects-wrapper'>
-            <h1 className="projects-title">
-                Projects
-            </h1>
-                <ProjectsProvider />
+        <section className="projects" id="projects">
+            <h1 className={`projects-title ${darkMode ? "home-title-light" : "home-title-dark"}`}
+            >Projects</h1>
+
         </section>
     )
 }

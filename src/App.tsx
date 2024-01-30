@@ -26,7 +26,7 @@ function App() {
       <div className={`App ${darkMode ? "dark" : ""}`}>
         <Navbar />
         <Home />
-        {/* <Projects /> */}
+        <Projects />
       </div>
     </DarkModeContext.Provider>
   );

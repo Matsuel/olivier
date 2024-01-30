@@ -1,5 +1,5 @@
 .home-wrapper{
-    margin-top: 80px;
+    margin-top: 150px;
     height:auto;
     width: 100%;
     display: flex;
@@ -34,11 +34,11 @@
 }
 
 .home-title-light{
-    color: #fff;
+    color: #CCCCCC;
 }
 
 .home-title-dark{
-    color: #000;
+    color: #42446E;
 }
 
 .home-text {
