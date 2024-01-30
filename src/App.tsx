@@ -15,9 +15,9 @@ function App() {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     if (darkMode) {
-      document.body.style.backgroundColor = "#fff";
+      document.body.style.backgroundColor = "#EEEEEE";
     } else {
-      document.body.style.backgroundColor = "#000";
+      document.body.style.backgroundColor = "#191919";
     }
   }
 
