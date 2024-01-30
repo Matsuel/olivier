@@ -59,7 +59,10 @@
 }
 
 .project-description{
-    width: 100%;
-    font-size: 16px;
+    width: 95%;
+    margin-left: 5%;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: start;
     white-space: pre-wrap;
 }
