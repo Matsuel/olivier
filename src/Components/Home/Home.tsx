@@ -27,7 +27,7 @@ const Home = () => {
                     repeat={Infinity}
                 />
             </h1>
-            <pre className={`home-text`} >
+            <div className={`home-text ${darkMode ? "home-title-light" : "home-title-dark"}`}>
                 former R&D engineer during about 20 years. I have worked in different industries and been involved in a few major international projects. 
                 Despite my interest in this position, I fell the need to integrate an artistic side to my work.
                 So I started a retraining in 2021 in order to become a game designer. Both technical and artistic aspects mixed in one role, the best position i could imagine ever.
@@ -37,7 +37,7 @@ const Home = () => {
                 Feel free to let constructive comments.
                 Any advice is really welcome.
                 Hito
-            </pre>
+            </div>
         </section>
     )
 }
