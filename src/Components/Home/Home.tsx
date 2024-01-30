@@ -28,7 +28,7 @@ const Home = () => {
                 />
             </h1>
             <div className={`home-text ${darkMode ? "home-title-light" : "home-title-dark"}`}>
-                former R&D engineer during about 20 years. I have worked in different industries and been involved in a few major international projects. 
+                Former R&D engineer during about 20 years. I have worked in different industries and been involved in a few major international projects. 
                 Despite my interest in this position, I fell the need to integrate an artistic side to my work.
                 So I started a retraining in 2021 in order to become a game designer. Both technical and artistic aspects mixed in one role, the best position i could imagine ever.
                 So here we are. 
@@ -36,7 +36,10 @@ const Home = () => {
                 Breaking news : Climb demo update is out.  :)
                 Feel free to let constructive comments.
                 Any advice is really welcome.
-                Hito
+                
+            </div>
+            <div className={`home-text ${darkMode ? "home-title-light" : "home-title-dark"}`}>
+            Hito
             </div>
         </section>
     )
