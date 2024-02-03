@@ -22,11 +22,14 @@ const Projects = () => {
             <h2 className={`projects-subtitle ${darkMode ? "home-title-light" : "home-title-dark"}`}>Things I’ve built so far</h2>
 
             <div className="projects-container">
+                {/* // Changer platform par plateforms car sinon cpt */}
                 {datas.map(({title, description, category, platform}:ProjectType, index: number) => {
                     return (
                         <div className={`project ${darkMode ? "project-dark" : "project-light"}`} key={index}>
                             <img src={ImageTest} alt="project" className="project-img" />
-                            <h3 className={`project-title ${darkMode ? "home-title-light" : "home-title-dark"}`}>{title}</h3>
+                            <h3 className={`project-title ${darkMode ? "home-title-light" : "home-title-dark"}`}>
+                                {title}
+                            </h3>
                             <p className={`project-description ${darkMode ? "home-title-light" : "home-title-dark"}`}>
                                 {description}
                             </p>
