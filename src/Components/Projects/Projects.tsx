@@ -6,13 +6,8 @@ import ImageTest from '../../assets/ProjectsImages/Am8U3b.png'
 import Apple from '../../assets/apple.svg'
 import Linux from '../../assets/linux.svg'
 import Windows from '../../assets/windows.svg'
+import { ProjectType } from './type'
 
-interface Project {
-    title : string,
-    description : string,
-    category : string,
-    platform : [string],
-}
 
 const Projects = () => {
     const { darkMode } = React.useContext(DarkModeContext);
@@ -27,19 +22,19 @@ const Projects = () => {
             <h2 className={`projects-subtitle ${darkMode ? "home-title-light" : "home-title-dark"}`}>Things I’ve built so far</h2>
 
             <div className="projects-container">
-                {datas.map((project: any, index: number) => {
+                {datas.map(({title, description, category, platform}:ProjectType, index: number) => {
                     return (
                         <div className={`project ${darkMode ? "project-dark" : "project-light"}`} key={index}>
                             <img src={ImageTest} alt="project" className="project-img" />
-                            <h3 className={`project-title ${darkMode ? "home-title-light" : "home-title-dark"}`}>{project.title}</h3>
+                            <h3 className={`project-title ${darkMode ? "home-title-light" : "home-title-dark"}`}>{title}</h3>
                             <p className={`project-description ${darkMode ? "home-title-light" : "home-title-dark"}`}>
-                                {project.description}
+                                {description}
                             </p>
                             <p className={`project-category ${darkMode ? "home-title-light" : "home-title-dark"}`}>
-                                Category: {project.category ? project.category : "No category"}
+                                Category: {category ? category : "No category"}
                             </p>
                             <div className={`project-footer`}>
-                                {project.platform.map((platform: string, index: number) => {
+                                {platform.map((platform: string, index: number) => {
                                     return (
                                         <img src={Plteforms[platform]} alt="platform" className="project-platform" key={index} />
                                     )
