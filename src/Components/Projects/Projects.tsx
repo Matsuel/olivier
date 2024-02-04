@@ -22,8 +22,7 @@ const Projects = () => {
             <h2 className={`projects-subtitle ${darkMode ? "home-title-light" : "home-title-dark"}`}>Things I’ve built so far</h2>
 
             <div className="projects-container">
-                {/* // Changer platform par plateforms car sinon cpt */}
-                {datas.map(({title, description, category, platform}:ProjectType, index: number) => {
+                {datas.map(({title, description, category, platforms}:ProjectType, index: number) => {
                     return (
                         <div className={`project ${darkMode ? "project-dark" : "project-light"}`} key={index}>
                             <img src={ImageTest} alt="project" className="project-img" />
@@ -37,7 +36,7 @@ const Projects = () => {
                                 Category: {category ? category : "No category"}
                             </p>
                             <div className={`project-footer`}>
-                                {platform.map((platform: string, index: number) => {
+                                {platforms.map((platform: string, index: number) => {
                                     return (
                                         <img src={Plteforms[platform]} alt="platform" className="project-platform" key={index} />
                                     )
