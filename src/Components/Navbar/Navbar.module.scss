@@ -1,0 +1,67 @@
+.Navbar_container {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 5%;
+  width:50%;
+  height: 6%;
+  z-index: 1000;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+
+  .Navbar_links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    // width: 50%;
+
+    .Navbar_title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: #f1c40f;
+        cursor: pointer;
+      }
+    }
+
+    .Navbar_link {
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      
+      svg {
+        width: 1.2rem;
+      }
+
+      &:hover {
+        color: #f1c40f;
+      }
+    }
+  }
+
+  .Navbar_socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .Navbar_social {
+      font-size: 1.2rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: #f1c40f;
+      }
+    }
+  }
+}

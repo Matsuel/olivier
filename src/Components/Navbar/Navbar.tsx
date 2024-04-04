@@ -1,65 +1,88 @@
-import React, { useContext } from 'react'
-import './Navbar.css'
-import Olivier from '../../assets/olivier.png'
-import Visit from '../../assets/visit.svg'
-import { useTranslation } from 'react-i18next';
-import Lang from '../../SwitchLang/Lang';
-import Moon from '../../assets/moon.svg'
-import Sun from '../../assets/sun.svg'
-import { DarkModeContext } from '../../DarkModeContext';
+import React from 'react';
 
-const Navbar = () => {
-    const [active, setActive] = React.useState(-1);
-    const navbarRef = React.useRef<HTMLDivElement>(null);
-    const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
-    console.log(darkMode);
-    const { t } = useTranslation();
+import styles from './Navbar.module.scss';
+import Link from 'next/link';
+import { faItchIo, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-    window.onwheel = e => {
-        if (e.deltaY > 0) {
-            // @ts-ignore
-            navbarRef.current.style.top = "-100px";
-        } else if (e.deltaY < 0) {
-            // @ts-ignore
-            navbarRef.current.style.top = "30px";
-        }
-    }
+interface NavbarProps {
 
-    // const handleDarkMode = () => {
-    //     setDarkMode(!darkMode);
-    // }
-
-    const handleActive = (index: number) => {
-        if (index === active) {
-            setActive(-1);
-        } else {
-            setActive(index);
-        }
-    }
-
-    return (
-        <div className='navbar-wrapper' ref={navbarRef}>
-            <div className="pseudo-wrap">
-                <img className='home-logo' src={Olivier} alt="Olivier" onClick={() => window.location.href = "/"} />
-                <a href='/' className={`pseudo ${darkMode ? "navbar-text-light" : "navbar-text-dark"}`}>H1to</a>
-            </div>
-            <div className="nav-links">
-                <a className={`link ${darkMode ? "navbar-text-light" : "navbar-text-dark"} ${active === 0 ? "link-active" : ""}`} onClick={() => handleActive(0)} href="#about">{t('navbar.about')}</a>
-                <a className={`link ${darkMode ? "navbar-text-light" : "navbar-text-dark"} ${active === 1 ? "link-active" : ""}`} onClick={() => handleActive(1)} href="#projects">{t('navbar.projects')}</a>
-            </div>
-            <Lang />
-            <div className="icth-link">
-                <button onClick={() => window.open('https://itch.io/profile/h1to', '_blank')} className={`link-button ${darkMode ? "navbar-text-light" : "navbar-text-dark"}`}>
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='visit-logo'>
-                            <path d="M4.93367 12L3.08987 5.73239C2.60867 4.09667 4.14094 2.58539 5.75514 3.10362C10.2067 4.53274 14.4553 6.53713 18.3948 9.06662C19.5259 9.79292 21 10.4417 21 12C21 13.5583 19.5259 14.2071 18.3948 14.9334C14.4553 17.4629 10.2067 19.4673 5.75514 20.8964C4.14094 21.4146 2.60867 19.9033 3.08987 18.2676L4.93367 12ZM4.93367 12H9.83493" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    Itch</button>
-                <button className='mode-button' onClick={() => toggleDarkMode()}>
-                    {darkMode ? <img src={Moon} alt="Moon" className='mode-logo' /> : <img src={Sun} alt="Sun" className='mode-logo' />}
-                </button>
-            </div>
-        </div>
-    )
 }
 
-export default Navbar
+type NavLink = {
+    name: string;
+    link: string;
+    icon: any;
+}
+
+type SocialLink = {
+    icon: any;
+    link: string;
+}
+
+const navLinks: NavLink[] = [
+    {
+        name: "Home",
+        link: "/",
+        icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+            <path strokeLinejoin='round' strokeLinecap='round' d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+    },
+    {
+        name: "Hero",
+        link: "#hero",
+        icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+        </svg>
+
+    },
+    {
+        name: "Projects",
+        link: "#projects",
+        icon: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+            <path strokeLinecap='round' strokeLinejoin='round' d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+        </svg>
+    },
+]
+
+const SocialLinks: SocialLink[] = [
+    {
+        icon: faLinkedin,
+        link: "https://www.linkedin.com/in/your-linkedin"
+    },
+    {
+        icon: faItchIo,
+        link: "https://h1to.itch.io/"
+    }
+]
+
+const Navbar = ({ }: NavbarProps) => {
+    return (
+        <div className={styles.Navbar_container}>
+            <div className={styles.Navbar_links}>
+                <h1 className={styles.Navbar_title}>H1to</h1>
+                {navLinks.map((link) => {
+                    return (
+                        <Link key={link.name} href={link.link} passHref className={styles.Navbar_link}>
+                            {link.icon}
+                            {link.name}
+                        </Link>
+                    )
+                })}
+            </div>
+
+            <div className={styles.Navbar_socials}>
+                {SocialLinks.map((link) => {
+                    return (
+                        <Link key={link.link} href={link.link} passHref className={styles.Navbar_social} target='_blank'>
+                            <FontAwesomeIcon icon={link.icon} />
+                        </Link>
+                    )
+                })}
+            </div>
+
+        </div>
+    );
+};
+
+export default Navbar;
