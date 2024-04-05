@@ -4,6 +4,7 @@ import styles from './Navbar.module.scss';
 import Link from 'next/link';
 import { faItchIo, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface NavbarProps {
 
@@ -16,7 +17,7 @@ type NavLink = {
 }
 
 type SocialLink = {
-    icon: any;
+    icon: IconProp;
     link: string;
 }
 
@@ -75,7 +76,7 @@ const Navbar = ({ }: NavbarProps) => {
                 {SocialLinks.map((link) => {
                     return (
                         <Link key={link.link} href={link.link} passHref className={styles.Navbar_social} target='_blank'>
-                            <FontAwesomeIcon icon={link.icon} />
+                            <FontAwesomeIcon icon={link.icon} width={20} height={20} />
                         </Link>
                     )
                 })}
