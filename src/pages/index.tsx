@@ -16,9 +16,9 @@ export default function Home() {
       </Head>
 
       <div className={styles.container}>
-        <Image src={BottomGradient} alt="Top Gradient" className={styles.topGradient} />
+        {/* <Image src={BottomGradient} alt="Top Gradient" className={styles.topGradient} /> */}
         <Navbar />
-        <Image src={BottomGradient} alt="Bottom Gradient" className={styles.botGradient} />
+        {/* <Image src={BottomGradient} alt="Bottom Gradient" className={styles.botGradient} /> */}
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
@@ -58,13 +58,16 @@ const SocialLinks: SocialLink[] = [
 ]
 
 const Navbar = ({ }: NavbarProps) => {
+
+    const [activeLink, setActiveLink] = useState<string>('Home');
+
     return (
         <div className={styles.Navbar_container}>
             <div className={styles.Navbar_links}>
                 <h1 className={styles.Navbar_title}>H1to</h1>
                 {navLinks.map((link) => {
                     return (
-                        <Link key={link.name} href={link.link} passHref className={styles.Navbar_link}>
+                        <Link key={link.name} href={link.link} passHref className={styles.Navbar_link + (activeLink === link.name ? ' ' + styles.Navbar_linkActive : '')} onClick={() => setActiveLink(link.name)}>
                             {link.icon}
                             {link.name}
                         </Link>
