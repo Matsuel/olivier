@@ -13,7 +13,9 @@ const Home = ({ }: HomeProps) => {
             <div className={styles.Home_content}>
                 <div className={styles.Home_profile} />
                 <div className={styles.Home_content_text}>
-                    <h1 className={styles.Home_name}>Olivier Tebar</h1>
+                    <h1 className={styles.Home_name}>
+                        Olivier Tebar
+                    </h1>
                     <p className={styles.Home_description}>Game designer, France 🇫🇷 <Emoji unified="1f1e8-1f1f5" size={20}/></p>
                 </div>
             </div>
