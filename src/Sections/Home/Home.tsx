@@ -27,7 +27,7 @@ const Home = ({ }: HomeProps) => {
 
                 <p>So here we are. I am gonna try to show you some of my creations. Thank you to take a look to my works. Additionnal contents will be available soon.</p>
 
-                <p>Breaking news : Climb demo update is out.  :)</p>
+                <p><strong>Breaking news</strong> : Climb demo update is out.  :)</p>
 
                 <p>Feel free to let constructive comments. Any advice is really welcome.</p>
 
