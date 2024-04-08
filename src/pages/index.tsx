@@ -1,11 +1,10 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Navbar from "../Components/Navbar/Navbar";
-import Image from "next/image";
-import BottomGradient from "@/assets/bot-gradient.svg";
+import Home from "@/Sections/Home/Home";
 
 
-export default function Home() {
+export default function App() {
   return (
     <>
       <Head>
@@ -16,9 +15,8 @@ export default function Home() {
       </Head>
 
       <div className={styles.container}>
-        {/* <Image src={BottomGradient} alt="Top Gradient" className={styles.topGradient} /> */}
         <Navbar />
-        {/* <Image src={BottomGradient} alt="Bottom Gradient" className={styles.botGradient} /> */}
+        <Home />
       </div>
     </>
   );
