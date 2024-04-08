@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Navbar from "../Components/Navbar/Navbar";
 import Home from "@/Sections/Home/Home";
+import Experiences from "@/Sections/Experiences/Experiences";
 
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
       <div className={styles.container}>
         <Navbar />
         <Home />
+        <Experiences />
       </div>
     </>
   );
