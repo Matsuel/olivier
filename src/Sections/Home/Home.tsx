@@ -19,19 +19,19 @@ const Home = ({ }: HomeProps) => {
             </div>
 
             <div className={styles.Home_speech}>
-                Hi everyone.
+                <p>Hi everyone.</p>
 
-                I am Hito, a <code>former R&D</code> engineer during about <code>20 years</code>. I have worked in different industries and been involved in a few major international projects. Despite my interest in this position, I fell the need to integrate an artistic side to my work.
+                <p>I am Hito, a <code>former R&D</code> engineer during about <code>20 years</code>. I have worked in different industries and been involved in a few major international projects. Despite my interest in this position, I fell the need to integrate an artistic side to my work.
                 So I started a <code>retraining in 2021</code> in order to become a <code>game designer</code>.
-                Both technical and artistic aspects mixed in one role, the best position i could imagine ever.
+                Both technical and artistic aspects mixed in one role, the best position i could imagine ever.</p>
 
-                So here we are. I am gonna try to show you some of my creations. Thank you to take a look to my works. Additionnal contents will be available soon.
+                <p>So here we are. I am gonna try to show you some of my creations. Thank you to take a look to my works. Additionnal contents will be available soon.</p>
 
-                Breaking news : Climb demo update is out.  :)
+                <p>Breaking news : Climb demo update is out.  :)</p>
 
-                Feel free to let constructive comments. Any advice is really welcome.
+                <p>Feel free to let constructive comments. Any advice is really welcome.</p>
 
-                <code>Hito</code>
+                <p><code>Hito</code></p>
             </div>
 
         </section>
