@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
 import { ModeToggle } from './ModeToggle';
+import { Button } from './ui/button';
 
 type NavLink = {
     name: string;
@@ -46,7 +47,7 @@ const SocialLinks: SocialLink[] = [
             <rect width="4" height="12" x="2" y="9" />
             <circle cx="4" cy="4" r="2" />
         </svg>,
-        link: "https://www.linkedin.com/in/your-linkedin"
+        link: "https://www.linkedin.com/in/olivier-tebar-323151204/"
     },
     {
         icon:
@@ -62,7 +63,7 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState<string>('Home');
 
     return (
-        <div className="fixed w-[60%] h-[6%] top-[5%] rounded-xl z-50 flex items-center bg-[#27272a] px-4">
+        <div className="fixed w-[60%] h-[6%] top-[5%] rounded-xl z-50 flex items-center bg-black px-4">
             <div className="flex flex-row items-center justify-between h-[80%] w-full gap-2">
                 <div className="flex items-center gap-2 ml-6">
                     <h1 className="text-2xl mr-6">
@@ -74,7 +75,7 @@ const Navbar = () => {
                     <div className="flex flex-row gap-2 rounded-3xl px-5">
                         {navLinks.map((link) => {
                             return (
-                                <Link key={link.name} href={link.link} passHref onClick={() => setActiveLink(link.name)} className="flex flex-row w-auto px-3 py-2 text-base font-medium gap-2 rounded-3xl hover:bg-[#f1f1f1] hover:text-black">
+                                <Link key={link.name} href={link.link} passHref onClick={() => setActiveLink(link.name)} className={`flex flex-row w-auto px-3 py-2 text-base font-medium gap-2 rounded-3xl hover:bg-[#f1f1f1] hover:text-black border-border border-1 ${activeLink === link.name && "bg-[#f1f1f1] text-black"}`}>
                                     <div className='w-5 h-5'>
                                         {link.icon}
                                     </div>
@@ -86,14 +87,14 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-row items-center gap-6 mr-6">
+                <div className="flex flex-row items-center gap-3 mr-3">
                     <ModeToggle />
                     {SocialLinks.map((link) => {
                         return (
-                            <Link key={link.link} href={link.link} passHref className="text-xl transition-all ease-in-out hover:text-[#f1c40f]" target='_blank'>
-                                <div className='w-4 h-4'>
+                            <Link key={link.link} href={link.link} passHref target='_blank'>
+                                <Button variant='outline' size='icon' className='border-border border-1'>
                                     {link.icon}
-                                </div>
+                                </Button>
                             </Link>
                         )
                     })}

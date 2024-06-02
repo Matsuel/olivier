@@ -10,6 +10,9 @@ const config = {
 	],
   prefix: "",
   theme: {
+    borderWidth: {
+      1: "1px",
+    },
     container: {
       center: true,
       padding: "2rem",
