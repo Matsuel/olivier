@@ -42,7 +42,7 @@ const navLinks: NavLink[] = [
 
 const SocialLinks: SocialLink[] = [
     {
-        icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        icon: <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
             <rect width="4" height="12" x="2" y="9" />
             <circle cx="4" cy="4" r="2" />
@@ -51,7 +51,7 @@ const SocialLinks: SocialLink[] = [
     },
     {
         icon:
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z" />
                 <path d="M6 17h12" />
             </svg>,
@@ -63,7 +63,7 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState<string>('Home');
 
     return (
-        <div className="fixed w-[60%] h-[6%] top-[5%] rounded-xl z-50 flex items-center bg-black px-4">
+        <div className="fixed w-[60%] h-[6%] top-[5%] rounded-xl z-50 flex items-center dark:bg-black px-4 border-border border-1 dark:border-none">
             <div className="flex flex-row items-center justify-between h-[80%] w-full gap-2">
                 <div className="flex items-center gap-2 ml-6">
                     <h1 className="text-2xl mr-6">
@@ -75,7 +75,7 @@ const Navbar = () => {
                     <div className="flex flex-row gap-2 rounded-3xl px-5">
                         {navLinks.map((link) => {
                             return (
-                                <Link key={link.name} href={link.link} passHref onClick={() => setActiveLink(link.name)} className={`flex flex-row w-auto px-3 py-2 text-base font-medium gap-2 rounded-3xl hover:bg-[#f1f1f1] hover:text-black border-border border-1 ${activeLink === link.name && "bg-[#f1f1f1] text-black"}`}>
+                                <Link key={link.name} href={link.link} passHref onClick={() => setActiveLink(link.name)} className={`flex flex-row items-center w-auto px-3 py-2 text-base font-medium gap-2 rounded-3xl hover:bg-accent border-border border-1 ${activeLink === link.name && "text-accent-foreground bg-accent"}`}>
                                     <div className='w-5 h-5'>
                                         {link.icon}
                                     </div>

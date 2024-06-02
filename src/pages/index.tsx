@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Head from "next/head";
 import Image from "next/image";
 
 export default function Home() {
@@ -6,6 +7,11 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center justify-between relative`}
     >
+
+      <Head>
+        <title>H1to</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
       <Navbar />
 
