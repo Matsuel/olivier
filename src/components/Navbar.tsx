@@ -66,7 +66,7 @@ const Navbar = () => {
         <div className="fixed w-[60%] h-[6%] top-[5%] rounded-xl z-50 flex items-center dark:bg-black px-4 border-border border-1 dark:border-none">
             <div className="flex flex-row items-center justify-between h-[80%] w-full gap-2">
                 <div className="flex items-center gap-2 ml-6">
-                    <h1 className="text-2xl mr-6">
+                    <h1 className="text-2xl mr-6 font-semibold">
                         <Link href="/" passHref>
                             H1to
                         </Link>
@@ -75,7 +75,7 @@ const Navbar = () => {
                     <div className="flex flex-row gap-2 rounded-3xl px-5">
                         {navLinks.map((link) => {
                             return (
-                                <Link key={link.name} href={link.link} passHref onClick={() => setActiveLink(link.name)} className={`flex flex-row items-center w-auto px-3 py-2 text-base font-medium gap-2 rounded-3xl hover:bg-accent border-border border-1 ${activeLink === link.name && "text-accent-foreground bg-accent"}`}>
+                                <Link key={link.name} href={link.link} passHref onClick={() => setActiveLink(link.name)} className={`flex flex-row items-center w-auto px-3 h-10 text-base font-medium gap-2 rounded-3xl hover:bg-accent border-border border-1 ${activeLink === link.name && "text-accent-foreground bg-accent"}`}>
                                     <div className='w-5 h-5'>
                                         {link.icon}
                                     </div>
