@@ -3,7 +3,7 @@ import React from 'react'
 
 const Hero = () => {
     return (
-        <section id="home" className='w-full h-[85vh] mt-[8%] flex items-center relative'>
+        <section id="home" className='w-full h-[95vh] mt-[3%] flex items-center relative'>
 
             <div className='flex flex-row w-full h-full'>
                 <div className='w-1/2 flex flex-col items-center justify-center gap-20'>
