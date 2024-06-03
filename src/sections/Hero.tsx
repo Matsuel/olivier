@@ -1,4 +1,5 @@
 import { BackgroundBeams } from '@/components/ui/background-beams'
+import BlurIn from '@/components/ui/blur-in'
 import React from 'react'
 
 const Hero = () => {
@@ -7,9 +8,10 @@ const Hero = () => {
 
             <div className='flex flex-row w-full h-full'>
                 <div className='w-1/2 flex flex-col items-center justify-center gap-20'>
-                    <h1 className='w-4/6 text-5xl font-bold'>
+                    {/* <h1 className='w-4/6 text-5xl font-bold'>
                         Hello, I'm Olivier Tebar
-                    </h1>
+                    </h1> */}
+                    <BlurIn word='Hello, I am Olivier Tebar' className='w-4/6 font-bold' />
                     <p className='w-4/6 text-lg font-normal'>
                     </p>
                 </div>
