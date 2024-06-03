@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
-import { ModeToggle } from './ModeToggle';
 import { Button } from './ui/button';
 
 type NavLink = {
@@ -88,7 +87,6 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex flex-row items-center gap-3 mr-3">
-                    <ModeToggle />
                     {SocialLinks.map((link) => {
                         return (
                             <Link key={link.link} href={link.link} passHref target='_blank'>
