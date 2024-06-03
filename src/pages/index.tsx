@@ -1,5 +1,6 @@
 import { ModeToggle } from "@/components/ModeToggle";
 import Navbar from "@/components/Navbar";
+import Hero from "@/sections/Hero";
 import Head from "next/head";
 
 export default function Home() {
@@ -15,9 +16,7 @@ export default function Home() {
 
       <Navbar />
 
-      <h1 className="text-4xl font-bold text-center mt-56">
-        Tailwind CSS
-      </h1>
+      <Hero />
 
       <ModeToggle />
     </main>

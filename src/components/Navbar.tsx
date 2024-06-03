@@ -62,7 +62,7 @@ const Navbar = () => {
     const [activeLink, setActiveLink] = useState<string>('Home');
 
     return (
-        <div className="fixed w-full h-[8%] rounded-b-xl z-50 flex items-center dark:bg-black px-4 shadow-xl ring-1 ring-slate-100 dark:ring-0 dark:border-border dark:border-b-1">
+        <div className="fixed w-full h-[8%] rounded-b-xl z-[5000] flex items-center dark:bg-black px-4 shadow-xl ring-1 ring-slate-100 dark:ring-0 dark:border-border dark:border-b-1">
             <div className="flex flex-row items-center justify-between h-[80%] w-full gap-2">
                 <h1 className="text-4xl ml-32 font-semibold">
                     <Link href="/" passHref>
