@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button'
 
 const Hero = () => {
     return (
-        <section id="home" className='w-full h-[80vh] mt-[7%] flex flex-col items-center relative py-9'>
+        <section id="home" className='w-full h-[90vh] flex flex-col items-center relative py-[10%]'>
 
             <BackgroundBeams className='absolute top-0 h-[80vh]' />
 
