@@ -9,11 +9,11 @@ import { Button } from '@/components/ui/button'
 
 const Hero = () => {
     return (
-        <section id="home" className='w-full h-[80vh] mt-[10%] flex flex-col items-center relative'>
+        <section id="home" className='w-full h-[80vh] mt-[7%] flex flex-col items-center relative py-9'>
 
-            <BackgroundBeams className='absolute h-[80vh]' />
+            <BackgroundBeams className='absolute top-0 h-[80vh]' />
 
-            <div className='flex flex-row w-full h-full'>
+            <div className='flex flex-row w-full h-auto'>
                 <div className='w-[60%] flex flex-col items-center justify-center gap-5'>
                     <BlurIn word="Hello, I'm Olivier Tebar" className='font-bold' />
                     <div className='w-[60%] h-[64px] flex flex-row items-center justify-center gap-14 dark:shadow-primary-foreground shadow-2xl z-50 bg-background rounded-xl'>
