@@ -7,7 +7,7 @@ const Work = (props: WorkType) => {
     return (
         <div className='w-[80%] h-auto flex flex-row justify-start gap-12'>
             {props.src !== "" ?
-                <Image src={props.src} alt={props.title} width={40} height={40} className='rounded-xl' />
+                <Image src={props.src} alt={props.title} width={0} height={0} className='rounded-xl bg-white p-1 w-10 h-10' />
                 :
                 <div className='w-[40px] h-[40px] bg-white rounded-xl flex justify-center items-center'>
                     <PlugZap size={20} strokeWidth={2} />
