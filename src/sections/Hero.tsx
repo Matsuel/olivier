@@ -4,10 +4,14 @@ import Image from 'next/image'
 import React from 'react'
 import Olivier from '@/assets/olivier.png'
 import { Emoji } from 'emoji-picker-react'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 
 const Hero = () => {
     return (
-        <section id="home" className='w-full h-[80vh] mt-[3%] flex items-center '>
+        <section id="home" className='w-full h-[80vh] mt-[10%] flex flex-col items-center relative'>
+
+            <BackgroundBeams className='absolute h-[80vh]' />
 
             <div className='flex flex-row w-full h-full'>
                 <div className='w-[60%] flex flex-col items-center justify-center gap-5'>
@@ -17,7 +21,7 @@ const Hero = () => {
                         <Emoji unified="1f1e8-1f1f5" size={50} />
                     </div>
                     <p className='w-[60%] text-xl font-normal'>
-                    Hito, a former R&D engineer, transitioned to game design in 2021, blending technical and artistic aspects. He showcases his work and encourages feedback. Updates to his game, Climb, are underway.
+                        Hito, a former R&D engineer, transitioned to game design in 2021, blending technical and artistic aspects. He showcases his work and encourages feedback. Updates to his game, Climb, are underway.
                     </p>
                 </div>
                 <div className='w-[40%] flex justify-center items-center'>
@@ -31,7 +35,21 @@ const Hero = () => {
                 </div>
             </div>
 
-            <BackgroundBeams className='absolute h-[80vh]' />
+            <div className='w-full h-full z-10 flex flex-row justify-center'>
+                <Link href='/#contact' passHref>
+                    <Button variant='default' size='lg' className='m-5'>
+                        Contact me
+                    </Button>
+                </Link>
+
+                <Link href='https://www.linkedin.com/in/olivier-tebar-323151204/' passHref target='_blank'>
+                    <Button variant='outline' size='lg' className='m-5 border-1 border-border text-black text-base'>
+                        LinkedIn
+                    </Button>
+                </Link>
+
+
+            </div>
         </section>
     )
 }
