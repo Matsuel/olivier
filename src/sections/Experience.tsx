@@ -5,7 +5,7 @@ import React from 'react'
 
 const Experience = () => {
     return (
-        <section id="experiences" className='w-full h-auto flex flex-row items-center py-24 bg-[#f5f5f0]'>
+        <section id="experiences" className='w-full h-auto flex flex-row items-center pt-24 pb-12 bg-[#f5f5f0]'>
             <div className='w-1/2 h-auto flex flex-col items-center justify-center'>
                 <h2 className='text-4xl font-medium'>Programmes & Degrees</h2>
 

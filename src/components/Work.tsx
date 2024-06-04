@@ -13,9 +13,9 @@ const Work = (props: WorkType) => {
                     <PlugZap size={20} strokeWidth={2} />
                 </div>
             }
-            <div>
-                <h3>{props.title} at {props.company}</h3>
-                <p>{props.date}</p>
+            <div className='w-auto h-auto flex flex-col justify-center gap-1'>
+                <h3 className='font-medium'>{props.title} at <span className='font-bold'>{props.company}</span></h3>
+                <p className='text-[#9a9fab] font-semibold'>{props.date}</p>
             </div>
         </div>
     )
