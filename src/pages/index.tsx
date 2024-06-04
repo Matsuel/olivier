@@ -1,5 +1,6 @@
 import { ModeToggle } from "@/components/ModeToggle";
 import Navbar from "@/components/Navbar";
+import Experience from "@/sections/Experience";
 import Hero from "@/sections/Hero";
 import Head from "next/head";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar />
 
       <Hero />
+      <Experience />
 
       {/* <ModeToggle /> */}
     </main>
