@@ -18,7 +18,7 @@ export default function Home() {
 
       <Hero />
 
-      <ModeToggle />
+      {/* <ModeToggle /> */}
     </main>
   );
 }
