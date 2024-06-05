@@ -74,7 +74,7 @@ const Navbar = () => {
                     <div className="flex flex-row gap-2 rounded-3xl px-5">
                         {navLinks.map((link) => {
                             return (
-                                <Link key={link.name} href={link.link} passHref onClick={() => setActiveLink(link.name)} className={`flex flex-row bg-[#f5f5f0] items-center w-auto px-3 h-10 text-[#9a9fab] font-medium gap-2 rounded-xl hover:text-black ${activeLink === link.name && "text-black"}`}>
+                                <Link key={link.name} href={link.link} passHref onClick={() => setActiveLink(link.name)} className={`flex flex-row bg-[#f5f5f0] items-center w-auto px-3 h-10 text-[#9a9fab] font-medium gap-2 rounded-xl hover:text-black transition-all ease-in-out ${activeLink === link.name && "text-black"}`}>
                                     <div className='w-5 h-5'>
                                         {link.icon}
                                     </div>
