@@ -74,11 +74,10 @@ const Navbar = () => {
                     <div className="flex flex-row gap-2 rounded-3xl px-5">
                         {navLinks.map((link) => {
                             return (
-                                <Link key={link.name} href={link.link} passHref onClick={() => setActiveLink(link.name)} className={`flex flex-row items-center w-auto px-3 h-10 text-base font-medium gap-2 rounded-3xl hover:bg-accent border-border border-1 ${activeLink === link.name && "bg-accent"}`}>
+                                <Link key={link.name} href={link.link} passHref onClick={() => setActiveLink(link.name)} className={`flex flex-row bg-[#f5f5f0] items-center w-auto px-3 h-10 text-[#9a9fab] font-medium gap-2 rounded-xl hover:text-black ${activeLink === link.name && "text-black"}`}>
                                     <div className='w-5 h-5'>
                                         {link.icon}
                                     </div>
-
                                     {link.name}
                                 </Link>
                             )
@@ -88,7 +87,7 @@ const Navbar = () => {
                         {SocialLinks.map((link) => {
                             return (
                                 <Link key={link.link} href={link.link} passHref target='_blank'>
-                                    <Button variant='outline' size='icon' className='border-border border-1'>
+                                    <Button variant='outline' size='icon' className='bg-black text-white hover:bg-[#f5f5f0]'>
                                         {link.icon}
                                     </Button>
                                 </Link>
