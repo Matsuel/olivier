@@ -1,6 +1,6 @@
 import React from 'react'
 import { projects } from '@/datas/projects';
-import Image from 'next/image';
+import Project from '@/components/Project';
 
 const Projects = () => {
 
@@ -12,20 +12,13 @@ const Projects = () => {
         .sort((a, b) => b - a) // Sort numerically
         .map(num => `/${num}.png`) // Convert back to the key format
 
-    console.log(sortedImages)
-
+    
 
     return (
-        <section id="projects" className='w-full h-[5vh] flex flex-col items-center pt-24 pb-12'>
+        <section id="projects" className='w-full h-auto flex flex-col items-center pt-24 gap-6'>
+            <h2 className='text-4xl font-medium mb-10'>My Projects</h2>
             {projects.map((project, index) => (
-                <div key={project.description} className='w-3/4 h-auto flex flex-row items-center justify-between'>
-                    <Image
-                        src={`/projects${sortedImages[index]}`}
-                        alt={project.title}
-                        width={300}
-                        height={300}
-                    />
-                </div>
+                <Project index={index} key={project.title} project={project} sortedImages={sortedImages} />
             ))}
 
         </section>

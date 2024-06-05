@@ -1,11 +1,11 @@
-export type Project = {
+export type ProjectType = {
     title: string,
     description: string,
     category: string,
     platforms: string[],
 }
 
-export const projects: Project[] = [
+export const projects: ProjectType[] = [
     {
         title: "Chimera Project",
         description: "This is a 2D genetically modified game. Create a bad-ass chimera and fight boss through levels.",
