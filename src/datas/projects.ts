@@ -75,7 +75,9 @@ export const projects: ProjectType[] = [
         title:'FPS',
         description:'2 weeks to create from scratch an UR4 demo',
         category:'Shooter',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Main theme of Climb',
@@ -91,73 +93,97 @@ export const projects: ProjectType[] = [
         title:'Thanks to grease pencil',
         description:'',
         category:'Animation project - 2D',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Low poly demo',
         description:'A simple animation entirely created on blender',
         category:'Animation project - 3D ',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Character design',
         description:'',
         category:'Animation project - 3D ',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Assets creation',
         description:'3D temple',
         category:'Level design project - 3D',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Assets creation',
         description:'3D Windmill',
         category:'Level design project - 3D',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Péril en Daïza',
         description:'Level design for the game "Péril en Daïza"',
         category:'Level design - Maps design',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Map creation',
         description:'Futuristic city, freely inspired by Baku',
         category:'Architecture project',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Map creation',
         description:'Aztec templo mayor',
         category:'Architecture project',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Map creation',
         description:'Albi Cathedral',
         category:'Architecture project',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Tribute to Airwolf II theme',
         description:'Tribute to Airwolf II theme',
         category:'Sound design project - Bonus track',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Agögé - Vertical slice',
         description:"A 2D platformser, h'n's and roguelite demo game",
         category:'Game demo',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Agögé - presentation',
         description:"2D roguelite, H'n'S and platformser styles game",
         category:'Action - 2D Game',
-        platforms:[]
+        platforms:[
+            'W',
+        ]
     },
     {
         title:'Godot Wild Jam #61',
