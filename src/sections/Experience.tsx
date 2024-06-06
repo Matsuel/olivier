@@ -12,8 +12,8 @@ const Experience = () => {
                 <div className='w-3/4 h-auto flex flex-col items-center justify-center mt-12'>
                     {formations.map((formation, index) => (
                         <>
-                            <Work key={index} {...formation} />
-                            <div className='w-[64%] h-[2px] bg-[#e7e9de] my-6' />
+                            <Work key={formation.company} {...formation} />
+                            <div key={formation.date} className='w-[64%] h-[2px] bg-[#e7e9de] my-6' />
                         </>
                     ))}
                 </div>
@@ -24,8 +24,8 @@ const Experience = () => {
                 <div className='w-3/4 h-auto flex flex-col items-center justify-center mt-12'>
                     {works.map((formation, index) => (
                         <>
-                            <Work key={index} {...formation} />
-                            <div className='w-[64%] h-[2px] bg-[#e7e9de] my-6' />
+                            <Work key={formation.company} {...formation} />
+                            <div key={formation.date} className='w-[64%] h-[2px] bg-[#e7e9de] my-6' />
                         </>
                     ))}
                 </div>

@@ -3,6 +3,7 @@ export type ProjectType = {
     description: string,
     category: string,
     platforms: string[],
+    link?: string
 }
 
 export const projects: ProjectType[] = [
@@ -43,7 +44,7 @@ export const projects: ProjectType[] = [
 
     },
     {
-        title:'Cats - Family Ties',
+        title:'GWJ#63 - Cats - Family Ties',
         description:'Your kittens have disappeared. Inquire with the inhabitants of the farm. Then go on an adventure.',
         category:'',
         platforms:[
@@ -52,7 +53,7 @@ export const projects: ProjectType[] = [
         ]
     },
     {
-        title:'Harvest - To bee or not to bee',
+        title:'GWJ#62 - Harvest - To bee or not to bee',
         description:'To bee or not to bee : a 2D bucolic bee game',
         category:'Adventure',
         platforms:[
@@ -62,7 +63,7 @@ export const projects: ProjectType[] = [
         ]
     },
     {
-        title:'Climb - Update',
+        title:'GWJ#61 - Climb - Update',
         description:'2D rock climbing game',
         category:'',
         platforms:[
@@ -72,7 +73,7 @@ export const projects: ProjectType[] = [
         ]
     },
     {
-        title:'FPS',
+        title:'FTPS, 2 weeks to create from scratch a UR4 demo',
         description:'2 weeks to create from scratch an UR4 demo',
         category:'Shooter',
         platforms:[
@@ -80,7 +81,7 @@ export const projects: ProjectType[] = [
         ]
     },
     {
-        title:'Main theme of Climb',
+        title:'GWJ#61 - Ascension - Main theme of Climb',
         description:'2D rock climbing game',
         category:'Ascension',
         platforms:[
@@ -90,103 +91,25 @@ export const projects: ProjectType[] = [
         ]
     },
     {
-        title:'Thanks to grease pencil',
-        description:'',
-        category:'Animation project - 2D',
-        platforms:[
-            'W',
-        ]
-    },
-    {
-        title:'Low poly demo',
-        description:'A simple animation entirely created on blender',
-        category:'Animation project - 3D ',
-        platforms:[
-            'W',
-        ]
-    },
-    {
-        title:'Character design',
-        description:'',
-        category:'Animation project - 3D ',
-        platforms:[
-            'W',
-        ]
-    },
-    {
-        title:'Assets creation',
-        description:'3D temple',
-        category:'Level design project - 3D',
-        platforms:[
-            'W',
-        ]
-    },
-    {
-        title:'Assets creation',
-        description:'3D Windmill',
-        category:'Level design project - 3D',
-        platforms:[
-            'W',
-        ]
-    },
-    {
-        title:'Péril en Daïza',
-        description:'Level design for the game "Péril en Daïza"',
-        category:'Level design - Maps design',
-        platforms:[
-            'W',
-        ]
-    },
-    {
-        title:'Map creation',
-        description:'Futuristic city, freely inspired by Baku',
-        category:'Architecture project',
-        platforms:[
-            'W',
-        ]
-    },
-    {
-        title:'Map creation',
-        description:'Aztec templo mayor',
-        category:'Architecture project',
-        platforms:[
-            'W',
-        ]
-    },
-    {
-        title:'Map creation',
-        description:'Albi Cathedral',
-        category:'Architecture project',
-        platforms:[
-            'W',
-        ]
-    },
-    {
-        title:'Tribute to Airwolf II theme',
-        description:'Tribute to Airwolf II theme',
-        category:'Sound design project - Bonus track',
-        platforms:[
-            'W',
-        ]
-    },
-    {
-        title:'Agögé - Vertical slice',
+        title:'Game demo - Agögé - Vertical slice',
         description:"A 2D platformser, h'n's and roguelite demo game",
         category:'Game demo',
         platforms:[
             'W',
-        ]
+        ],
+        link: 'https://h1to.itch.io/vertical-slice-agg'
     },
     {
-        title:'Agögé - presentation',
+        title:'Agögé - a 2d game - presentation',
         description:"2D roguelite, H'n'S and platformser styles game",
         category:'Action - 2D Game',
         platforms:[
             'W',
-        ]
+        ],
+        link: 'https://h1to.itch.io/final-project-v-slice-agg'
     },
     {
-        title:'Godot Wild Jam #61',
+        title:'Godot Wild Jam #61 - Climb',
         description:"",
         category:'Adventure - Climb',
         platforms:[
