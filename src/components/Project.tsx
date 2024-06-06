@@ -6,6 +6,8 @@ import Windows from '@/assets/windows.svg';
 import Linux from '@/assets/linux.svg';
 import Link from 'next/link';
 import { nameToLink } from '@/lib/nameToLink';
+import ItchIO from '@/assets/Itchio.svg';
+import Arrow from '@/assets/arrow.svg';
 
 const Project = (props: { project: ProjectType, index: number, sortedImages: string[] }) => {
 
@@ -30,8 +32,11 @@ const Project = (props: { project: ProjectType, index: number, sortedImages: str
                 <p className='text-[#9a9fab] font-semibold'>{props.project.description}</p>
                 <Link 
                 href={props.project.link? props.project.link :`https://h1to.itch.io/${nameToLink(props.project.title)}`} 
-                target='_blank'>
-                    View more on Itch.io
+                target='_blank'
+                className='flex flex-row items-center'>
+                    View more on 
+                    <Image src={ItchIO} alt='Itch.io' width={96} height={48} />
+                    <Image src={Arrow} alt='Arrow' width={24} height={24} className='animate-view-more'/>
                 </Link>
             </div>
             <div className={`w-[50%] h-auto flex flex-row items-center justify-end p-4 -mr-16 -mb-12 transition-all ease-in-out ${hovered && "translate-x-3 translate-y-3 -rotate-2"}`}>
