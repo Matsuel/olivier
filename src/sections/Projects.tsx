@@ -15,7 +15,7 @@ const Projects = () => {
     
 
     return (
-        <section id="projects" className='w-full h-auto flex flex-col items-center pt-24 gap-6'>
+        <section id="projects" className='w-full h-auto flex flex-col items-center pt-24 pb-24 gap-6'>
             <h2 className='text-4xl font-medium mb-10'>My Projects</h2>
             {projects.map((project, index) => (
                 <Project index={index} key={project.title} project={project} sortedImages={sortedImages} />
